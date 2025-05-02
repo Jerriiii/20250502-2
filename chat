@@ -1,0 +1,8 @@
+### 說明：
+1. **`createCanvas(windowWidth, windowHeight)`**：設定畫布為全螢幕大小。
+2. **`createCapture(VIDEO)`**：啟用攝影機影像擷取。
+3. **`capture.size(windowWidth * 0.8, windowHeight * 0.8)`**：將影像大小設為視窗的 80%。
+4. **`image(capture, x, y)`**：將影像繪製在畫布上，並置中顯示。
+5. **`windowResized`**：當視窗大小改變時，動態調整畫布與影像大小。
+
+將此程式碼儲存於 sketch.js 中即可執行。
