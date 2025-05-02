@@ -32,8 +32,16 @@ function draw() {
     for (let y = 0; y < graphics.height; y += 20) {
       // 從攝影機影像中取得相對應位置的顏色
       let col = capture.get(x, y);
-      graphics.fill(col); // 設定圓的顏色為該位置的顏色
-      graphics.ellipse(x + 10, y + 10, 15, 15); // 繪製寬高為 15 的圓
+      graphics.fill(col); // 設定方框的顏色為該位置的顏色
+      graphics.rect(x, y, 18, 18); // 繪製寬高為 18 的方框
+
+      // 在方框中間繪製 5 個黑色圓
+      graphics.fill(0); // 設定圓的顏色為黑色
+      for (let i = 0; i < 5; i++) {
+        let cx = x + 9; // 圓的中心 x 座標
+        let cy = y + 3 + i * 3; // 圓的中心 y 座標，垂直排列
+        graphics.ellipse(cx, cy, 3, 3); // 繪製直徑為 3 的圓
+      }
     }
   }
 
