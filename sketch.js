@@ -37,11 +37,11 @@ function draw() {
     }
   }
 
-  // 將 graphics 顯示在攝影機影像的上方
+  // 將 graphics 顯示在攝影機影像的上方，並置中
   image(
     graphics,
     (width - graphics.width) / 2, // 計算 graphics 水平置中的位置
-    (height - graphics.height) / 2 - graphics.height // 顯示在攝影機影像的上方
+    (height - graphics.height) / 2 - graphics.height // 顯示在攝影機影像的正上方
   );
 }
 
@@ -50,4 +50,3 @@ function windowResized() {
   capture.size(windowWidth * 0.8, windowHeight * 0.8); // 更新影像大小
   graphics = createGraphics(capture.width, capture.height); // 更新 graphics 大小
 }
-
